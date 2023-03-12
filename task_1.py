@@ -1,6 +1,11 @@
-x = int(input()) 
+x = int(input())
 
-for d in range(2, x+1): 
-    if x % d == 0: 
-        print(d) 
+found = False
+for d in range(2, int(x**0.5)+1):
+    if x % d == 0:
+        print(d)
+        found = True
         break
+
+if not found:
+    print(x)
